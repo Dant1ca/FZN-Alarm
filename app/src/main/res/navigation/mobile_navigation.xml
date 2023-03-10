@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_gong">
+
+    <fragment
+        android:id="@+id/navigation_alarm_container"
+        android:name="xyz.dantic.fzn_alarm.ui.alarm.AlarmContainerFragment"
+        android:label="@string/alarm"
+        tools:layout="@layout/fragment_alarm_container" />
+
+    <fragment
+        android:id="@+id/navigation_gong"
+        android:name="xyz.dantic.fzn_alarm.ui.gong.GongFragment"
+        android:label="@string/gong"
+        tools:layout="@layout/fragment_gong" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="xyz.dantic.fzn_alarm.ui.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

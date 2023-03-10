@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.alarm.AlarmEditorFragment"
+    android:layout_marginBottom="?android:actionBarSize" >
+
+    <LinearLayout
+        android:id="@+id/layout_time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:gravity="center"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <NumberPicker
+            android:id="@+id/numberpicker_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.FZNAlarm.NumberPicker"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:theme="@style/Theme.FZNAlarm.NumberPicker"/>
+
+        <NumberPicker
+            android:id="@+id/numberpicker_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.FZNAlarm.NumberPicker"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_time_picker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="75dp"
+        android:paddingBottom="90dp"
+        android:clipToPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_alarm_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardMaxElevation="5dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_vertical_center_alarm_editor_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.0" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_vertical_center_alarm_editor_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.45" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_vertical_center_alarm_editor_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.55" />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_vertical_center_alarm_editor_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="1.0" />
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_weekdays"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="10dp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_center_alarm_editor_2"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_vertical_center_alarm_editor_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="0dp">
+
+                    <ImageView
+                        android:id="@+id/imageview_weekdays_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_gong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/weekdays"
+                        android:textStyle="bold"
+                        android:theme="@style/Theme.FZNAlarm.Text_Description"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_monday"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="10dp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_center_alarm_editor_2"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_vertical_center_alarm_editor_1"
+                    app:layout_constraintTop_toBottomOf="@+id/linearlayout_weekdays">
+
+                    <ImageView
+                        android:id="@+id/imageview_monday_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_notif" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/monday"
+                        android:theme="@style/Theme.FZNAlarm.Text_Description"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_tuesday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="10dp"
+                    android:paddingStart="15dp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_center_alarm_editor_4"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_vertical_center_alarm_editor_3"
+                    app:layout_constraintTop_toBottomOf="@+id/linearlayout_weekdays">
+
+                    <ImageView
+                        android:id="@+id/imageview_tuesday_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_gong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/tuesday"
+                        android:theme="@style/Theme.FZNAlarm.Text_Description" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_wednesday"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="10dp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_center_alarm_editor_2"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_vertical_center_alarm_editor_1"
+                    app:layout_constraintTop_toBottomOf="@+id/linearlayout_monday">
+
+                    <ImageView
+                        android:id="@+id/imageview_wednesday_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_gong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/wednesday"
+                        android:theme="@style/Theme.FZNAlarm.Text_Description"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_thursday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="10dp"
+                    android:paddingStart="15dp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_center_alarm_editor_4"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_vertical_center_alarm_editor_3"
+                    app:layout_constraintTop_toBottomOf="@+id/linearlayout_monday">
+
+                    <ImageView
+                        android:id="@+id/imageview_thursday_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_gong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/thursday"
+                        android:theme="@style/Theme.FZNAlarm.Text_Description" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_friday"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="10dp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_center_alarm_editor_2"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_vertical_center_alarm_editor_1"
+                    app:layout_constraintTop_toBottomOf="@+id/linearlayout_wednesday">
+
+                    <ImageView
+                        android:id="@+id/imageview_friday_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_gong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/friday"
+                        android:theme="@style/Theme.FZNAlarm.Text_Description"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_weekends"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="10dp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_center_alarm_editor_2"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_vertical_center_alarm_editor_1"
+                    app:layout_constraintTop_toBottomOf="@+id/linearlayout_friday"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/imageview_weekends_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_gong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/weekends"
+                        android:textStyle="bold"
+                        android:theme="@style/Theme.FZNAlarm.Text_Description"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_saturday"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:paddingVertical="10dp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_center_alarm_editor_2"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_vertical_center_alarm_editor_1"
+                    app:layout_constraintTop_toBottomOf="@+id/linearlayout_weekends">
+
+                    <ImageView
+                        android:id="@+id/imageview_saturday_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_gong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/saturday"
+                        android:theme="@style/Theme.FZNAlarm.Text_Description"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_sunday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="10dp"
+                    android:paddingStart="15dp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_center_alarm_editor_4"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_vertical_center_alarm_editor_3"
+                    app:layout_constraintTop_toBottomOf="@+id/linearlayout_weekends">
+
+                    <ImageView
+                        android:id="@+id/imageview_sunday_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_gong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/sunday"
+                        android:theme="@style/Theme.FZNAlarm.Text_Description" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_gong_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="5dp"
+                android:layout_marginStart="45dp"
+                app:layout_constraintTop_toBottomOf="@id/cardview_alarm_days"
+                app:layout_constraintStart_toStartOf="parent"
+                android:scaleX="0.9"
+                android:scaleY="0.9">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_gong" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/gong"
+                    android:theme="@style/Theme.FZNAlarm.Text_Description"
+                    android:textStyle="italic"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_notif_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="5dp"
+                app:layout_constraintTop_toBottomOf="@id/cardview_alarm_days"
+                app:layout_constraintStart_toEndOf="@id/linearlayout_gong_key"
+                app:layout_constraintEnd_toStartOf="@id/linearlayout_muted_key"
+                android:scaleX="0.9"
+                android:scaleY="0.9">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_notif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/notification"
+                    android:theme="@style/Theme.FZNAlarm.Text_Description"
+                    android:textStyle="italic"/>/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_muted_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="5dp"
+                android:layout_marginEnd="45dp"
+                app:layout_constraintTop_toBottomOf="@id/cardview_alarm_days"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:scaleX="0.9"
+                android:scaleY="0.9">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_no_sound" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/muted"
+                    android:theme="@style/Theme.FZNAlarm.Text_Description"
+                    android:textStyle="italic"/>/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fab_delete_alarm"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
+    android:backgroundTint="#EC8282"
+    android:scaleX="1.2"
+    android:scaleY="1.2"
+    android:src="@drawable/ic_delete"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:maxImageSize="30dp"
+    app:borderWidth="0dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

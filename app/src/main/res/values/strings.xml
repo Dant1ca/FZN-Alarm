@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    General-->
+    <string name="app_name">FZN Alarm</string>
+    <string name="app_description">Set alarms for sending forth righteous thoughts</string>
+
+    <string name="alarm">Alarm</string>
+    <string name="music">Music</string>
+    <string name="gong">Gong</string>
+    <string name="settings">Settings</string>
+
+
+    <!--    Notifications-->
+    <string name="alarms">Alarms</string>
+    <string name="music_player">Music Player</string>
+    <string name="reminder">Reminder</string>
+    <string name="currently_playing">Currently Playing</string>
+    <string name="upcoming_alarm_set_for">Upcoming alarm set for</string>
+    <string name="next_alarm_at">Next alarm at</string>
+
+
+    <!--    Alarm-->
+    <string name="notif">Notif.</string>
+    <string name="notification">Notification</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
+    <string name="everyday">Every day</string>
+    <string name="weekdays">Weekdays</string>
+    <string name="weekends">Weekends</string>
+
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+
+    <string-array name="daysOfWeekLong">
+        <item>@string/monday</item>
+        <item>@string/tuesday</item>
+        <item>@string/wednesday</item>
+        <item>@string/thursday</item>
+        <item>@string/friday</item>
+        <item>@string/saturday</item>
+        <item>@string/sunday</item>
+    </string-array>
+
+    <string-array name="daysOfWeekShort">
+        <item>@string/mon</item>
+        <item>@string/tue</item>
+        <item>@string/wed</item>
+        <item>@string/thu</item>
+        <item>@string/fri</item>
+        <item>@string/sat</item>
+        <item>@string/sun</item>
+    </string-array>
+
+    <string name="snooze_message">Turn Off For Today</string>
+
+
+<!--    Gong Player-->
+    <string name="audio_track">Audio Track</string>
+
+    <string-array name="audio_tracks">
+        <item>15 Minute</item>
+        <item>30 Minute</item>
+        <item>45 Minute</item>
+        <item>60 Minute</item>
+    </string-array>
+
+
+<!--    Settings -->
+    <string name="alarm_reminder">Alarm Reminder</string>
+    <string name="alarm_volume">Alarm Volume</string>
+
+<!--    Should stay in English because city given by TimeZone is only in English-->
+    <string name="beijing">Beijing</string>
+    <string name="timezone_update_description">Automatically Update Based On Timezone</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="muted">Muted</string>
+
+    <string name="suggestions_description">To report issues with the app, or to suggest new features, please email:</string>
+
+    <string-array name="reminder_times">
+        <item>Off</item>
+        <item>1 Minute</item>
+        <item>2 Minutes</item>
+        <item>3 Minutes</item>
+        <item>4 Minutes</item>
+        <item>5 Minutes</item>
+        <item>6 Minutes</item>
+        <item>7 Minutes</item>
+        <item>8 Minutes</item>
+        <item>9 Minutes</item>
+        <item>10 Minutes</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="21dp"
+        tools:context=".ui.alarm.DetailedAlarmFragment">
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hour : Min"
+            android:theme="@style/Theme.FZNAlarm.Text_Header"
+            android:layout_marginStart="9dp"/>
+<!--            android:textColor="@color/dark_grey"/>-->
+
+        <TextView
+            android:id="@+id/text_days_for_gong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="Gong days"
+            android:theme="@style/Theme.FZNAlarm.Text_Description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_time" />
+
+        <Switch
+            android:id="@+id/switch_alarm_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:layout_constraintBottom_toBottomOf="@+id/text_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_time"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:id="@+id/text_gong_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gong"
+            android:theme="@style/Theme.FZNAlarm.Text_Description"
+            app:layout_constraintBottom_toBottomOf="@+id/text_days_for_gong"
+            app:layout_constraintEnd_toStartOf="@+id/icon_gong_id"
+            app:layout_constraintTop_toTopOf="@+id/text_days_for_gong" />
+
+        <ImageView
+            android:id="@+id/icon_gong_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_gong"
+            android:scaleX="0.75"
+            android:scaleY="0.75"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_days_for_gong"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_days_for_gong"/>
+
+        <TextView
+            android:id="@+id/text_days_for_notif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notif days"
+            android:theme="@style/Theme.FZNAlarm.Text_Description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_days_for_gong"
+            android:layout_marginTop="9dp"/>
+
+        <TextView
+            android:id="@+id/text_notif_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notif"
+            android:theme="@style/Theme.FZNAlarm.Text_Description"
+            app:layout_constraintBottom_toBottomOf="@+id/text_days_for_notif"
+            app:layout_constraintEnd_toStartOf="@+id/icon_notif_id"
+            app:layout_constraintTop_toTopOf="@+id/text_days_for_notif" />
+
+        <ImageView
+            android:id="@+id/icon_notif_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_notif"
+            android:scaleX="0.75"
+            android:scaleY="0.75"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_days_for_notif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_days_for_notif" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    General-->
+    <string name="app_name">发正念钟声</string>
+    <string name="app_description">设置发正念的钟声</string>
+
+    <string name="alarm">闹钟</string>
+    <string name="music">声音</string>
+    <string name="gong">洪钟声</string>
+    <string name="settings">设置</string>
+
+
+    <!--    Notifications-->
+    <string name="alarms">闹钟</string>
+    <string name="music_player">手动计时</string>
+    <string name="reminder">发正念提醒</string>
+    <string name="currently_playing">正在计时</string>
+    <string name="upcoming_alarm_set_for">即将到来的闹钟设置为</string>
+    <string name="next_alarm_at">下一个闹钟设置为</string>
+
+
+    <!--    Alarm-->
+    <string name="notif">通知</string>
+    <string name="notification">仅通知</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+
+    <string name="everyday">每天</string>
+    <string name="weekdays">工作日</string>
+    <string name="weekends">周末</string>
+
+    <string name="monday">星期一</string>
+    <string name="tuesday">星期二</string>
+    <string name="wednesday">星期三</string>
+    <string name="thursday">星期四</string>
+    <string name="friday">星期五</string>
+    <string name="saturday">星期六</string>
+    <string name="sunday">星期日</string>
+
+    <string name="mon">星期一</string>
+    <string name="tue">星期二</string>
+    <string name="wed">星期三</string>
+    <string name="thu">星期四</string>
+    <string name="fri">星期五</string>
+    <string name="sat">星期六</string>
+    <string name="sun">星期日</string>
+
+    <string-array name="daysOfWeekLong">
+        <item>@string/monday</item>
+        <item>@string/tuesday</item>
+        <item>@string/wednesday</item>
+        <item>@string/thursday</item>
+        <item>@string/friday</item>
+        <item>@string/saturday</item>
+        <item>@string/sunday</item>
+    </string-array>
+
+    <string-array name="daysOfWeekShort">
+        <item>@string/mon</item>
+        <item>@string/tue</item>
+        <item>@string/wed</item>
+        <item>@string/thu</item>
+        <item>@string/fri</item>
+        <item>@string/sat</item>
+        <item>@string/sun</item>
+    </string-array>
+
+    <string name="snooze_message">关闭这次钟声</string>
+
+
+    <!--    Gong Player-->
+    <string name="audio_track">时间长度</string>
+
+    <string-array name="audio_tracks">
+        <item>15分钟</item>
+        <item>30分钟</item>
+        <item>45分钟</item>
+        <item>60分钟</item>
+    </string-array>
+
+
+    <!--    Settings -->
+    <string name="alarm_reminder">鸣钟前提醒</string>
+    <string name="alarm_volume">钟声音量</string>
+
+    <!--    Should stay in English because city given by TimeZone is only in English-->
+    <string name="beijing">Beijing</string>
+    <string name="timezone_update_description">根据时区自动更新</string>
+    <string name="enabled">启用</string>
+    <string name="disabled">禁用</string>
+    <string name="muted">静音</string>
+
+    <string name="suggestions_description">想要报告应用程序的问题或建议新的功能，请发送电子邮件至:</string>
+
+    <string-array name="reminder_times">
+        <item>无提醒</item>
+        <item>1分钟</item>
+        <item>2分钟</item>
+        <item>3分钟</item>
+        <item>4分钟</item>
+        <item>5分钟</item>
+        <item>6分钟</item>
+        <item>7分钟</item>
+        <item>8分钟</item>
+        <item>9分钟</item>
+        <item>10分钟</item>
+    </string-array>
+
+</resources>
